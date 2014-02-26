@@ -63,27 +63,3 @@ def config_boolean(option):
         return ""
 
 register.filter('config_boolean', config_boolean)
-
-def admin_site_views(view):
-    """Returns a formatted list of sites, rendering for view, if any"""
-
-    if view:
-        path = urlresolvers.reverse(view)
-    else:
-        path = None
-
-    links = []
-    for site in Site.objects.all():
-        paths = ["http://", site.domain]
-        if path:
-            paths.append(path)
-
-        links.append((site.name, url_join(paths)))
-
-    ret = {
-        'links' : links,
-    }
-    return ret
-
-
-register.inclusion_tag('livesettings/_admin_site_views.html')(admin_site_views)

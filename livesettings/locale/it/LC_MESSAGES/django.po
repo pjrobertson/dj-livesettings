@@ -99,8 +99,3 @@ msgstr "Impostazioni di gruppo: %(name)s"
 #: templates/livesettings/site_settings.html:86
 msgid "Uncollapse all"
 msgstr "Espandi tutti"
-
-#: templates/livesettings/_admin_site_views.html:5
-msgid "Sites"
-msgstr "Siti"
-

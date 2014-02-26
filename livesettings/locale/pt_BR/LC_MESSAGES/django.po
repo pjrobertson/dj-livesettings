@@ -92,9 +92,3 @@ msgstr "Configurações de grupo: %(name)s"
 #, fuzzy
 msgid "Uncollapse all"
 msgstr "Desmarcar todos"
-
-#: templates/livesettings/_admin_site_views.html:5
-#, fuzzy
-msgid "Sites"
-msgstr "Notas"
-

@@ -39,10 +39,6 @@ msgstr "ברירת מחדל:"
 msgid "Default value: %s"
 msgstr "ברירת מחדל:%s"
 
-#: templates/livesettings/_admin_site_views.html:4
-msgid "Sites"
-msgstr "אתרים"
-
 #: templates/livesettings/group_settings.html:11
 #: templates/livesettings/site_settings.html:23
 msgid "Documentation"

@@ -579,11 +579,11 @@ class PermissionTest(TestCase):
         # usually login_url_mask % nexturl is '/accounts/login/?next=/settings/'
         login_url_mask = '%s?next=%%s' % reverse('django.contrib.auth.views.login')
         # unauthorized
-        response = self.client.get(reverse('satchmo_site_settings')) # usually '/settings/'
+        response = self.client.get(reverse('livesettings_site_settings')) # usually '/settings/'
         self.assertRedirects(response, login_url_mask % '/settings/', msg_prefix='unathorized user should first login')
         # few authorized
         self.client.login(username='warehouseman', password='secret')
-        response = self.client.get(reverse('satchmo_site_settings'))
+        response = self.client.get(reverse('livesettings_site_settings'))
         self.assertRedirects(response, login_url_mask % '/settings/', msg_prefix='user with small permission should not read normal settings')
         # authorized enough but not for secret values
         self.client.login(username='cautious_developer', password='secret')
@@ -593,7 +593,7 @@ class PermissionTest(TestCase):
     def test_authorized_enough(self):
         "Testing a sufficiently authorized user"
         self.client.login(username='cautious_developer', password='secret')
-        response = self.client.get(reverse('satchmo_site_settings'))
+        response = self.client.get(reverse('livesettings_site_settings'))
         self.assertContains(response, 'SingleItem')
         self.client.login(username='superuser', password='secret')
         response = self.client.get(reverse('settings_export'))

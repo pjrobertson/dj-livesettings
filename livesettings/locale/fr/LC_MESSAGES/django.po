@@ -106,8 +106,3 @@ msgstr "Paramètres du groupe: %(name)s"
 #: templates/livesettings/site_settings.html.py:84
 msgid "Uncollapse all"
 msgstr "Déployer tout"
-
-#: templates/livesettings/_admin_site_views.html.py:5
-msgid "Sites"
-msgstr "Sites"
-
