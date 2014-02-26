@@ -28,10 +28,10 @@ setup(
                    'Programming Language :: Python',
                    'Framework :: Django'],
     packages = find_packages(),
-    install_requires = ('django-keyedcache>=1.6-0',),
-    dependency_links = (
-        'https://github.com/pjrobertson/dj-keyedcache/archive/master.zip#egg=django-keyedcache-1.6-0',
-        ),
+    # install_requires = ('django-keyedcache>=1.6-0',), Apparently this isn't good. It's OK for local installs, but not for deployment
+    # dependency_links = (
+         # 'https://github.com/pjrobertson/dj-keyedcache/archive/master.zip#egg=django-keyedcache-1.6-0',
+        # ),
     setup_requires=('setuptools_hg',),
     include_package_data = True,
 )
