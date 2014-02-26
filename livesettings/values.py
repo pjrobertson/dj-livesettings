@@ -218,7 +218,7 @@ class Value(object):
             note = ""
         else:
             if self.default == "":
-                note = _('Default value: ""')
+                note = _('""')
 
             elif self.choices:
                 work = []
@@ -228,10 +228,10 @@ class Value(object):
                             work.append('%s' % smart_str(gettext(x[1])))
                     except TypeError:
                         continue
-                note = gettext('Default value: ') + ", ".join(work)
+                note = ", ".join(work)
 
             else:
-                note = _("Default value: %s") % unicode(self.default)
+                note = _("%s") % unicode(self.default)
 
         return note
 

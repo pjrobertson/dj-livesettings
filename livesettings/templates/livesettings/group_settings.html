@@ -47,8 +47,7 @@
 						<p class="help">{{ field.help_text|break_at:40 }}</p>
 					{% endif %}
 					{% if field.field.default_text %}
-                    <p></p>
-					    <p class="help">{{ field.field.default_text|break_at:40}}</p>
+                    <p class="help">{% trans "Default Value" %}: <em>{{ field.field.default_text|break_at:40}}</em></p>
 					{% endif %}
 				</td>
 				<td>{{ field }}</td>
