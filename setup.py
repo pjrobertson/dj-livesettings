@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = (1, 4, 13)
+VERSION = (1, 6, 0)
 
 # Dynamically calculate the version based on VERSION tuple
 if len(VERSION)>2 and VERSION[2] is not None:
@@ -19,7 +19,7 @@ setup(
     author_email = 'bruce@ecomsmith.com',
     url = 'http://bitbucket.org/bkroeze/django-livesettings/',
     license = 'New BSD License',
-    platforms = ['any'],
+    platforms = ('any',),
     classifiers = ['Development Status :: 4 - Beta',
                    'Environment :: Web Environment',
                    'Intended Audience :: Developers',
@@ -28,6 +28,10 @@ setup(
                    'Programming Language :: Python',
                    'Framework :: Django'],
     packages = find_packages(),
-    setup_requires=["setuptools_hg"],
+    install_requires = ('django-keyedcache>=1.6-0',),
+    dependency_links = (
+        'https://github.com/pjrobertson/dj-keyedcache/archive/master.zip#egg=django-keyedcache-1.6-0',
+        ),
+    setup_requires=('setuptools_hg',),
     include_package_data = True,
 )
